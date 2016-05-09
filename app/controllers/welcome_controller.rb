@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
 	before_action :whitelist_params
 
   def index 	
-		unless params[:name] == nil 	
+		if params[:name]	
 		 	limit = params[:limit].to_i
 		 	@name = params[:name]
 		 	if @name == '' or limit < 1
