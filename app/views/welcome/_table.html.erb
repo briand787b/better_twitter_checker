@@ -1,0 +1,25 @@
+<div class="row" id="table-row">
+	<div class="col-md-12" id="table-col">
+		<table class="table">
+			<thead>
+				<tr>
+					<h4><strong>Positive Tweets for <%= @name %></strong></h4>
+				</tr>
+				<tr>
+					<th>User</th>
+					<th>Tweet</th>
+					<th>Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @positive_tweets.each do |k,v| %>
+					<tr>
+						<td><%= k %></td>
+						<td><%= v[0] %></td>
+						<td><a href="<%= v[1] %>">Link</a></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

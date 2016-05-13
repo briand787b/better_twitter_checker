@@ -1,0 +1,18 @@
+//function below is deprecated now that AJAX is in use
+//keeping it here just so that I can find it if i ever
+//need it for another project 
+$(function(){
+	$('div[onload]').trigger('onload');
+});
+
+
+$("#tweet_table").html("<%= escape_javascript render('table') %>");
+
+function arrangeTable(){
+	document.getElementById('submission_row').className = "col-md-4";
+	document.getElementById('submission_box').className = "col-md-12";
+	document.getElementById('table-row').className = "col-md-8";
+	document.getElementById('notice-box').style.backgroundColor = "transparent";
+}
+
+arrangeTable();
