@@ -18,7 +18,7 @@ class Bot < ActiveRecord::Base
 	  def sentiment phrase
 	  	response = Unirest.post 'https://community-sentiment.p.mashape.com/text/',
 			  headers:{
-			    "X-Mashape-Key" => 'SESC0i4NmRmshg3rryO7GxAy4fdDp1KsQoyjsnbEzGPUvkxXFN', #ENV["mash_key"],
+			    "X-Mashape-Key" => ENV["mash_key"],
 			    "Content-Type" => "application/x-www-form-urlencoded",
 			    "Accept" => "application/json"
 			  },
